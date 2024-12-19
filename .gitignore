@@ -1,0 +1,58 @@
+# ASP.NET Core project files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+# Visual Studio specific
+.vscode/
+*.vcxproj.user
+*.vcxproj.filters
+.idea/
+.vs/
+
+# Build results
+*.dll
+*.exe
+*.app
+*.log
+*.pdb
+*.cache
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Packages
+packages/
+*.nupkg
+*.snupkg
+
+# npm / Yarn
+node_modules/
+yarn.lock
+
+# Publish output
+wwwroot/
+
+# Configuration files
+appsettings.json
+appsettings.Development.json

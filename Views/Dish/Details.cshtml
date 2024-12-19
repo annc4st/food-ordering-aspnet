@@ -1,0 +1,69 @@
+@model cafeMvc.Models.Dish
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h3>@Model.Name</h3>
+    </div>
+
+    <div class="d-flex justify-content-center">
+         <img src="@Model.ImageUrl" style="width: 50%" />
+    </div>
+
+    <div class="d-flex justify-content-center">
+        @Model.Price.ToString("C")
+    </div>
+    <div class="d-flex justify-content-center">
+        <p>Ingredients: </p>
+        @if( Model.DishIngredients != null && Model.DishIngredients.Any())
+        {
+        <ul>
+            @foreach(var item in Model.DishIngredients)
+            {
+                <li>@item.Ingredient.Name</li>
+            }
+        </ul>
+        }
+        else {
+             <p>No ingredients available.</p>
+        }
+    </div>
+
+<a class="btn btn-info" asp-action="Index">Back to the Menu</a>
+
+
+</div>
+@* 
+<div>
+    <h4>Dish</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div> *@
